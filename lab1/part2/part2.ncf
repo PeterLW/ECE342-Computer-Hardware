@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nios2_config version="1.0">
+    <system>
+        <system_info filepath="true">..\..\..\..\..\altera\11.1sp2\University_Program\NiosII_Computer_Systems\DE2\DE2_Basic_Computer\verilog\nios_system.ptf</system_info>
+        <sample_system_title>DE2 Basic Computer</sample_system_title>
+        <system_sof filepath="true">..\..\..\..\..\altera\11.1sp2\University_Program\NiosII_Computer_Systems\DE2\DE2_Basic_Computer\verilog\DE2_Basic_Computer.sof</system_sof>
+        <system_jdi filepath="true"/>
+        <cable>USB-Blaster [USB-0]</cable>
+        <processor JTAGHubInstanceID="0">CPU</processor>
+        <elf_section name="text">
+            <memory_device>SDRAM/s1</memory_device>
+            <memory_start_offset>1024</memory_start_offset>
+        </elf_section>
+        <elf_section name="data">
+            <memory_device>SDRAM/s1</memory_device>
+            <memory_start_offset>1024</memory_start_offset>
+        </elf_section>
+        <terminal JTAGHubInstanceID="0">JTAG_UART</terminal>
+    </system>
+    <program>
+        <type>C</type>
+        <options>
+            <source_files>
+                <source_file filepath="true">getting_started.c</source_file>
+            </source_files>
+            <compiler_flags>-g -O1 -ffunction-sections -fverbose-asm -fno-inline</compiler_flags>
+            <emulate_unimpl_instructions>true</emulate_unimpl_instructions>
+            <use_small_c_library>false</use_small_c_library>
+        </options>
+    </program>
+</nios2_config>

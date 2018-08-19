@@ -1,0 +1,24 @@
+
+State Machine - |drawlines|user_interface:UI|user_interface_FSM:comb_3|currentstate
+Name currentstate~4 currentstate~3 currentstate~2 
+currentstate.load_x0y0 0 0 0 
+currentstate.idle 0 1 1 
+currentstate.load_x1y1 0 0 1 
+currentstate.set_start 1 1 0 
+currentstate.load_steepxy 1 1 1 
+currentstate.load_realxy 1 0 0 
+currentstate.waiting 1 0 1 
+
+State Machine - |drawlines|LDA:LD|LDA_FSM:L|currentstate
+Name currentstate~5 currentstate~4 currentstate~3 currentstate~2 
+currentstate.idle 0 0 0 0 
+currentstate.abs_y 0 0 1 1 
+currentstate.init_data 0 0 1 0 
+currentstate.load_drawxy 0 1 0 1 
+currentstate.plot_xy 0 1 0 0 
+currentstate.inc_error 0 1 1 0 
+currentstate.cmp_err 1 0 0 1 
+currentstate.inc_y 1 0 0 0 
+currentstate.inc_x 1 0 1 1 
+currentstate.cmp_x 1 0 1 0 
+currentstate.waiting 1 1 0 1 

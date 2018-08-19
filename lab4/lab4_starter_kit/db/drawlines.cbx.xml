@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="drawlines">
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawlines|vga_adapter:VGA|altsyncram:VideoMemory" CBX_FILE_NAME="altsyncram_ddg1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

@@ -1,0 +1,14 @@
+
+State Machine - |LDA|LDA_FSM:L|currentstate
+Name currentstate.waiting currentstate.cmp_x currentstate.inc_x currentstate.inc_y currentstate.cmp_err currentstate.inc_error currentstate.plot_xy currentstate.load_drawxy currentstate.init_data currentstate.abs_y currentstate.idle 
+currentstate.idle 0 0 0 0 0 0 0 0 0 0 0 
+currentstate.abs_y 0 0 0 0 0 0 0 0 0 1 1 
+currentstate.init_data 0 0 0 0 0 0 0 0 1 0 1 
+currentstate.load_drawxy 0 0 0 0 0 0 0 1 0 0 1 
+currentstate.plot_xy 0 0 0 0 0 0 1 0 0 0 1 
+currentstate.inc_error 0 0 0 0 0 1 0 0 0 0 1 
+currentstate.cmp_err 0 0 0 0 1 0 0 0 0 0 1 
+currentstate.inc_y 0 0 0 1 0 0 0 0 0 0 1 
+currentstate.inc_x 0 0 1 0 0 0 0 0 0 0 1 
+currentstate.cmp_x 0 1 0 0 0 0 0 0 0 0 1 
+currentstate.waiting 1 0 0 0 0 0 0 0 0 0 1 

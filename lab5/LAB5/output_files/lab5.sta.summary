@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'ASC:drawline_controller|Mode_Register[10]'
+Slack : -3.814
+TNS   : -3.814
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : 1.191
+TNS   : 0.000
+
+Type  : Slow Model Setup 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 36.836
+TNS   : 0.000
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -0.921
+TNS   : -1.701
+
+Type  : Slow Model Hold 'ASC:drawline_controller|Mode_Register[10]'
+Slack : -0.134
+TNS   : -0.134
+
+Type  : Slow Model Hold 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 2.895
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'ASC:drawline_controller|Mode_Register[10]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : 7.620
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 17.873
+TNS   : 0.000
+
+Type  : Fast Model Setup 'ASC:drawline_controller|Mode_Register[10]'
+Slack : -1.400
+TNS   : -1.400
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : 1.271
+TNS   : 0.000
+
+Type  : Fast Model Setup 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 38.021
+TNS   : 0.000
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -0.891
+TNS   : -1.527
+
+Type  : Fast Model Hold 'ASC:drawline_controller|Mode_Register[10]'
+Slack : -0.053
+TNS   : -0.053
+
+Type  : Fast Model Hold 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 1.840
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'ASC:drawline_controller|Mode_Register[10]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : 7.620
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'LDA_cir|VGA|mypll|altpll_component|pll|clk[0]'
+Slack : 17.873
+TNS   : 0.000
+
+------------------------------------------------------------

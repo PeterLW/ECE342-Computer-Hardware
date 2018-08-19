@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Mar 09 17:16:51 2014
+Quartus II 32-bit Version : 11.1 Build 173 11/01/2011 SJ Web Edition
+Revision Name : drawlines
+Top-level Entity Name : lab5_top_module
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 1,923 / 33,216 ( 6 % )
+    Total combinational functions : 1,789 / 33,216 ( 5 % )
+    Dedicated logic registers : 898 / 33,216 ( 3 % )
+Total registers : 898
+Total pins : 66 / 475 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 274,432 / 483,840 ( 57 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

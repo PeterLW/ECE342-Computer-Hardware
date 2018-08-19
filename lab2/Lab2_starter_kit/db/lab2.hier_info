@@ -1,0 +1,441 @@
+|lab2
+SW[0] => A[0].IN2
+SW[1] => A[1].IN2
+SW[2] => ~NO_FANOUT~
+SW[3] => ~NO_FANOUT~
+SW[4] => ~NO_FANOUT~
+SW[5] => ~NO_FANOUT~
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => B[0].IN2
+SW[9] => B[1].IN1
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+HEX0[0] <= hex_digits:h0.port1
+HEX0[1] <= hex_digits:h0.port1
+HEX0[2] <= hex_digits:h0.port1
+HEX0[3] <= hex_digits:h0.port1
+HEX0[4] <= hex_digits:h0.port1
+HEX0[5] <= hex_digits:h0.port1
+HEX0[6] <= hex_digits:h0.port1
+HEX1[0] <= hex_digits:h1.port1
+HEX1[1] <= hex_digits:h1.port1
+HEX1[2] <= hex_digits:h1.port1
+HEX1[3] <= hex_digits:h1.port1
+HEX1[4] <= hex_digits:h1.port1
+HEX1[5] <= hex_digits:h1.port1
+HEX1[6] <= hex_digits:h1.port1
+HEX2[0] <= hex_digits:h2.port1
+HEX2[1] <= hex_digits:h2.port1
+HEX2[2] <= hex_digits:h2.port1
+HEX2[3] <= hex_digits:h2.port1
+HEX2[4] <= hex_digits:h2.port1
+HEX2[5] <= hex_digits:h2.port1
+HEX2[6] <= hex_digits:h2.port1
+HEX3[0] <= hex_digits:h3.port1
+HEX3[1] <= hex_digits:h3.port1
+HEX3[2] <= hex_digits:h3.port1
+HEX3[3] <= hex_digits:h3.port1
+HEX3[4] <= hex_digits:h3.port1
+HEX3[5] <= hex_digits:h3.port1
+HEX3[6] <= hex_digits:h3.port1
+
+
+|lab2|row_cct:R1
+m[0] => m[0].IN1
+m[1] => m[1].IN1
+q0 => q0.IN2
+q1 => q1.IN2
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+y[3] => y[3].IN1
+s[0] <= FA:F1.port3
+s[1] <= FA:F2.port3
+s[2] <= FA:F3.port3
+s[3] <= FA:F4.port3
+carryout[0] <= carryout[0].DB_MAX_OUTPUT_PORT_TYPE
+carryout[1] <= carryout[1].DB_MAX_OUTPUT_PORT_TYPE
+carryout[2] <= carryout[2].DB_MAX_OUTPUT_PORT_TYPE
+carryout[3] <= FA:F4.port4
+
+
+|lab2|row_cct:R1|FA_input_x:X1
+m => x.IN1
+m => x.IN1
+q0 => plus.IN0
+q0 => minus.IN0
+q1 => minus.IN1
+q1 => plus.IN1
+x <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R1|FA_input_x:X2
+m => x.IN1
+m => x.IN1
+q0 => plus.IN0
+q0 => minus.IN0
+q1 => minus.IN1
+q1 => plus.IN1
+x <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R1|FA:F1
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R1|FA:F2
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R1|FA:F3
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R1|FA:F4
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2
+m[0] => m[0].IN1
+m[1] => m[1].IN1
+q0 => q0.IN2
+q1 => q1.IN2
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+y[3] => y[3].IN1
+s[0] <= FA:F1.port3
+s[1] <= FA:F2.port3
+s[2] <= FA:F3.port3
+s[3] <= FA:F4.port3
+carryout[0] <= carryout[0].DB_MAX_OUTPUT_PORT_TYPE
+carryout[1] <= carryout[1].DB_MAX_OUTPUT_PORT_TYPE
+carryout[2] <= carryout[2].DB_MAX_OUTPUT_PORT_TYPE
+carryout[3] <= FA:F4.port4
+
+
+|lab2|row_cct:R2|FA_input_x:X1
+m => x.IN1
+m => x.IN1
+q0 => plus.IN0
+q0 => minus.IN0
+q1 => minus.IN1
+q1 => plus.IN1
+x <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2|FA_input_x:X2
+m => x.IN1
+m => x.IN1
+q0 => plus.IN0
+q0 => minus.IN0
+q1 => minus.IN1
+q1 => plus.IN1
+x <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2|FA:F1
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2|FA:F2
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2|FA:F3
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|row_cct:R2|FA:F4
+cin => s.IN1
+cin => Add1.IN1
+cin => cout.IN1
+x => s.IN0
+x => Add0.IN1
+x => cout.IN1
+y => s.IN1
+y => Add0.IN2
+y => Add1.IN2
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|hex_digits:h0
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN0
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+hex_LEDs[0] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[1] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[2] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[3] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[4] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[5] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[6] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|hex_digits:h1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN0
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+hex_LEDs[0] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[1] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[2] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[3] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[4] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[5] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[6] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|hex_digits:h2
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN0
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+hex_LEDs[0] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[1] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[2] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[3] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[4] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[5] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[6] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab2|hex_digits:h3
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN0
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[0] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN1
+x[1] => hex_LEDs.IN0
+x[1] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN0
+x[2] => hex_LEDs.IN1
+x[2] => hex_LEDs.IN0
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+x[3] => hex_LEDs.IN1
+hex_LEDs[0] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[1] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[2] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[3] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[4] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[5] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+hex_LEDs[6] <= hex_LEDs.DB_MAX_OUTPUT_PORT_TYPE
+
+

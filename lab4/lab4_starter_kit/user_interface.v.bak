@@ -1,0 +1,39 @@
+module subtractor(a, b, out);
+input[8:0] a, b;
+output[8:0] out;
+
+assign out=a-b;
+
+endmodule
+
+module comparator(a, b, out);
+input[8:0] a, b;
+output reg out;
+
+
+always@(*)
+if(a>b)
+	out=1;
+else
+	out=0;
+	
+endmodule
+
+module flip_flop(D, Q, enable, reset, clock);
+
+input[8:0] D;
+input enable, reset, clock;
+output reg[8:0] Q;
+
+always@(posedge clock or negedge reset)
+
+if(!reset)
+	Q<=0;
+else
+	Q<=D;
+	
+endmodule
+
+module user_interface();
+
+endmodule

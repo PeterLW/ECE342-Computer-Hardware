@@ -1,0 +1,784 @@
+Analysis & Synthesis report for user_interface
+Wed Feb 10 22:24:26 2016
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |user_interface|user_interface_FSM:comb_3|currentstate
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Parameter Settings for User Entity Instance: user_interface_FSM:comb_3
+ 13. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop_1bit:trigger"
+ 14. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_Y1"
+ 15. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_X1"
+ 16. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_Y0"
+ 17. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_X0"
+ 18. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m10"
+ 19. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m9"
+ 20. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m8"
+ 21. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m7"
+ 22. Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c4"
+ 23. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_Y1"
+ 24. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_X1"
+ 25. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_Y0"
+ 26. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_X0"
+ 27. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m6"
+ 28. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m5"
+ 29. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m4"
+ 30. Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m3"
+ 31. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:deltaY"
+ 32. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:deltaX"
+ 33. Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c2"
+ 34. Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c1"
+ 35. Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s4"
+ 36. Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s3"
+ 37. Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s2"
+ 38. Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s1"
+ 39. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:Y1"
+ 40. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:X1"
+ 41. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:Y0"
+ 42. Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:X0"
+ 43. Port Connectivity Checks: "UI_Datapath:comb_4"
+ 44. Elapsed Time Per Partition
+ 45. Analysis & Synthesis Messages
+ 46. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Feb 10 22:24:26 2016      ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name                      ; user_interface                             ;
+; Top-level Entity Name              ; user_interface                             ;
+; Family                             ; Cyclone II                                 ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 58                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; user_interface     ; user_interface     ;
+; Family name                                                                ; Cyclone II         ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
+; UI_components.v                  ; yes             ; User Verilog HDL File        ; E:/342lab/lab4/UI/UI_components.v  ;         ;
+; user_interface.v                 ; yes             ; Auto-Found Verilog HDL File  ; E:/342lab/lab4/UI/user_interface.v ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 58    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |user_interface            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 58   ; 0            ; |user_interface     ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |user_interface|user_interface_FSM:comb_3|currentstate                                                                                                                                 ;
++---------------------------+----------------------+--------------------------+---------------------------+------------------------+------------------------+-------------------+------------------------+
+; Name                      ; currentstate.waiting ; currentstate.load_realxy ; currentstate.load_steepxy ; currentstate.set_start ; currentstate.load_x1y1 ; currentstate.idle ; currentstate.load_x0y0 ;
++---------------------------+----------------------+--------------------------+---------------------------+------------------------+------------------------+-------------------+------------------------+
+; currentstate.load_x0y0    ; 0                    ; 0                        ; 0                         ; 0                      ; 0                      ; 0                 ; 0                      ;
+; currentstate.idle         ; 0                    ; 0                        ; 0                         ; 0                      ; 0                      ; 1                 ; 1                      ;
+; currentstate.load_x1y1    ; 0                    ; 0                        ; 0                         ; 0                      ; 1                      ; 0                 ; 1                      ;
+; currentstate.set_start    ; 0                    ; 0                        ; 0                         ; 1                      ; 0                      ; 0                 ; 1                      ;
+; currentstate.load_steepxy ; 0                    ; 0                        ; 1                         ; 0                      ; 0                      ; 0                 ; 1                      ;
+; currentstate.load_realxy  ; 0                    ; 1                        ; 0                         ; 0                      ; 0                      ; 0                 ; 1                      ;
+; currentstate.waiting      ; 1                    ; 0                        ; 0                         ; 0                      ; 0                      ; 0                 ; 1                      ;
++---------------------------+----------------------+--------------------------+---------------------------+------------------------+------------------------+-------------------+------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++-----------------------------------------------------+--------------------------------------+
+; Register name                                       ; Reason for Removal                   ;
++-----------------------------------------------------+--------------------------------------+
+; UI_Datapath:comb_4|flip_flop_1bit:trigger|Q         ; Stuck at GND due to stuck port clock ;
+; UI_Datapath:comb_4|flip_flop:deltaY|Q[0..8]         ; Stuck at GND due to stuck port clock ;
+; UI_Datapath:comb_4|flip_flop:Y0|Q[0]                ; Lost fanout                          ;
+; UI_Datapath:comb_4|flip_flop:Y1|Q[0]                ; Lost fanout                          ;
+; UI_Datapath:comb_4|flip_flop:deltaX|Q[0..8]         ; Stuck at GND due to stuck port clock ;
+; UI_Datapath:comb_4|flip_flop:X0|Q[0]                ; Lost fanout                          ;
+; UI_Datapath:comb_4|flip_flop:X1|Q[0]                ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate~2            ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate~3            ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate~4            ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.load_x0y0    ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.idle         ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.load_x1y1    ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.set_start    ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.load_steepxy ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.load_realxy  ; Lost fanout                          ;
+; user_interface_FSM:comb_3|currentstate.waiting      ; Lost fanout                          ;
+; Total Number of Removed Registers = 33              ;                                      ;
++-----------------------------------------------------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                         ;
++------------------------------------------+--------------------+-----------------------------------------------------+
+; Register name                            ; Reason for Removal ; Registers Removed due to This Register              ;
++------------------------------------------+--------------------+-----------------------------------------------------+
+; user_interface_FSM:comb_3|currentstate~2 ; Lost Fanouts       ; user_interface_FSM:comb_3|currentstate.idle,        ;
+;                                          ;                    ; user_interface_FSM:comb_3|currentstate.load_x1y1,   ;
+;                                          ;                    ; user_interface_FSM:comb_3|currentstate.load_steepxy ;
+; user_interface_FSM:comb_3|currentstate~3 ; Lost Fanouts       ; user_interface_FSM:comb_3|currentstate.set_start,   ;
+;                                          ;                    ; user_interface_FSM:comb_3|currentstate.waiting      ;
+; UI_Datapath:comb_4|flip_flop:Y0|Q[0]     ; Lost Fanouts       ; UI_Datapath:comb_4|flip_flop:Y1|Q[0]                ;
+; UI_Datapath:comb_4|flip_flop:X0|Q[0]     ; Lost Fanouts       ; UI_Datapath:comb_4|flip_flop:X1|Q[0]                ;
+; user_interface_FSM:comb_3|currentstate~4 ; Lost Fanouts       ; user_interface_FSM:comb_3|currentstate.load_x0y0    ;
++------------------------------------------+--------------------+-----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: user_interface_FSM:comb_3 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; load_x0y0      ; 2     ; Signed Integer                                ;
+; load_x1y1      ; 3     ; Signed Integer                                ;
+; load_steepxy   ; 5     ; Signed Integer                                ;
+; load_realxy    ; 6     ; Signed Integer                                ;
+; set_start      ; 4     ; Signed Integer                                ;
+; waiting        ; 7     ; Signed Integer                                ;
+; idle           ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop_1bit:trigger"                                                                                                                                         ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; D[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_Y1"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_X1"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_Y0"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:r_X0"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m10"                                                                                                         ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m9"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m8"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m7"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c4"                                                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_Y1"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_X1"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_Y0"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:s_X0"                                                                                                                                                      ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m6"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m5"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m4"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|mux_2to1:m3"                                                                                                          ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:deltaY"                                                                                                                                                   ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:deltaX"                                                                                                                                                   ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c2"                                                                                                                                                    ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; a       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; a[8..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|comparator:c1"                                                                                                                                                    ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; a       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (9 bits) it drives.  The 23 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; a[8..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s4"                                                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s3"                                                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s2"                                                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|subtractor:s1"                                                                                                        ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                   ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "a[8..1]" will be connected to GND. ;
+; b    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "b[8..1]" will be connected to GND. ;
++------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:Y1"                                                                                                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:X1"                                                                                                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:Y0"                                                                                                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D         ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "D[8..1]" will be connected to GND.                                          ;
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4|flip_flop:X0"                                                                                                                                                        ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D         ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (9 bits) it drives.  Extra input bit(s) "D[8..1]" will be connected to GND.                                          ;
+; Q         ; Output ; Warning  ; Output or bidir port (9 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[8..1]" have no fanouts                                                               ;
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UI_Datapath:comb_4"                                                                  ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; outx0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outy0 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outx1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outy1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Feb 10 22:24:25 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off user_interface -c user_interface
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 7 design units, including 7 entities, in source file ui_components.v
+    Info (12023): Found entity 1: mux_2to1
+    Info (12023): Found entity 2: subtractor
+    Info (12023): Found entity 3: comparator
+    Info (12023): Found entity 4: flip_flop
+    Info (12023): Found entity 5: flip_flop_1bit
+    Info (12023): Found entity 6: user_interface_FSM
+    Info (12023): Found entity 7: UI_Datapath
+Warning (10236): Verilog HDL Implicit Net warning at UI_components.v(313): created implicit net for "CLOCK_50"
+Warning (12125): Using design file user_interface.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: user_interface
+Critical Warning (10846): Verilog HDL Instantiation warning at user_interface.v(16): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at user_interface.v(19): instance has no name
+Info (12127): Elaborating entity "user_interface" for the top level hierarchy
+Warning (10030): Net "outx0" at user_interface.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "outy0" at user_interface.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "outx1" at user_interface.v(7) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "outy1" at user_interface.v(7) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "user_interface_FSM" for hierarchy "user_interface_FSM:comb_3"
+Info (12128): Elaborating entity "UI_Datapath" for hierarchy "UI_Datapath:comb_4"
+Info (12128): Elaborating entity "flip_flop" for hierarchy "UI_Datapath:comb_4|flip_flop:X0"
+Info (12128): Elaborating entity "subtractor" for hierarchy "UI_Datapath:comb_4|subtractor:s1"
+Info (12128): Elaborating entity "comparator" for hierarchy "UI_Datapath:comb_4|comparator:c1"
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "UI_Datapath:comb_4|mux_2to1:m1"
+Info (12128): Elaborating entity "flip_flop_1bit" for hierarchy "UI_Datapath:comb_4|flip_flop_1bit:trigger"
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "UI_Datapath:comb_4|CLOCK_50" is missing source, defaulting to GND
+Warning (12241): 30 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "outx0[0]" is stuck at GND
+    Warning (13410): Pin "outx0[1]" is stuck at GND
+    Warning (13410): Pin "outx0[2]" is stuck at GND
+    Warning (13410): Pin "outx0[3]" is stuck at GND
+    Warning (13410): Pin "outx0[4]" is stuck at GND
+    Warning (13410): Pin "outx0[5]" is stuck at GND
+    Warning (13410): Pin "outx0[6]" is stuck at GND
+    Warning (13410): Pin "outx0[7]" is stuck at GND
+    Warning (13410): Pin "outx0[8]" is stuck at GND
+    Warning (13410): Pin "outy0[0]" is stuck at GND
+    Warning (13410): Pin "outy0[1]" is stuck at GND
+    Warning (13410): Pin "outy0[2]" is stuck at GND
+    Warning (13410): Pin "outy0[3]" is stuck at GND
+    Warning (13410): Pin "outy0[4]" is stuck at GND
+    Warning (13410): Pin "outy0[5]" is stuck at GND
+    Warning (13410): Pin "outy0[6]" is stuck at GND
+    Warning (13410): Pin "outy0[7]" is stuck at GND
+    Warning (13410): Pin "outy0[8]" is stuck at GND
+    Warning (13410): Pin "outx1[0]" is stuck at GND
+    Warning (13410): Pin "outx1[1]" is stuck at GND
+    Warning (13410): Pin "outx1[2]" is stuck at GND
+    Warning (13410): Pin "outx1[3]" is stuck at GND
+    Warning (13410): Pin "outx1[4]" is stuck at GND
+    Warning (13410): Pin "outx1[5]" is stuck at GND
+    Warning (13410): Pin "outx1[6]" is stuck at GND
+    Warning (13410): Pin "outx1[7]" is stuck at GND
+    Warning (13410): Pin "outx1[8]" is stuck at GND
+    Warning (13410): Pin "outy1[0]" is stuck at GND
+    Warning (13410): Pin "outy1[1]" is stuck at GND
+    Warning (13410): Pin "outy1[2]" is stuck at GND
+    Warning (13410): Pin "outy1[3]" is stuck at GND
+    Warning (13410): Pin "outy1[4]" is stuck at GND
+    Warning (13410): Pin "outy1[5]" is stuck at GND
+    Warning (13410): Pin "outy1[6]" is stuck at GND
+    Warning (13410): Pin "outy1[7]" is stuck at GND
+    Warning (13410): Pin "outy1[8]" is stuck at GND
+    Warning (13410): Pin "start" is stuck at GND
+    Warning (13410): Pin "steep" is stuck at GND
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/342lab/lab4/UI/user_interface.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "x[0]"
+    Warning (15610): No output dependent on input pin "x[1]"
+    Warning (15610): No output dependent on input pin "x[2]"
+    Warning (15610): No output dependent on input pin "x[3]"
+    Warning (15610): No output dependent on input pin "x[4]"
+    Warning (15610): No output dependent on input pin "x[5]"
+    Warning (15610): No output dependent on input pin "x[6]"
+    Warning (15610): No output dependent on input pin "x[7]"
+    Warning (15610): No output dependent on input pin "x[8]"
+    Warning (15610): No output dependent on input pin "y[0]"
+    Warning (15610): No output dependent on input pin "y[1]"
+    Warning (15610): No output dependent on input pin "y[2]"
+    Warning (15610): No output dependent on input pin "y[3]"
+    Warning (15610): No output dependent on input pin "y[4]"
+    Warning (15610): No output dependent on input pin "y[5]"
+    Warning (15610): No output dependent on input pin "y[6]"
+    Warning (15610): No output dependent on input pin "y[7]"
+    Warning (15610): No output dependent on input pin "y[8]"
+    Warning (15610): No output dependent on input pin "go"
+    Warning (15610): No output dependent on input pin "CLOCK_50"
+Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 38 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 457 megabytes
+    Info: Processing ended: Wed Feb 10 22:24:26 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/342lab/lab4/UI/user_interface.map.smsg.
+
+

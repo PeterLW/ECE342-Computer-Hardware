@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="drawlines">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|xy_select:xy_selection|xy_mux:x0_sel|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_tmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|vga_adapter:VGA|altsyncram:VideoMemory" CBX_FILE_NAME="altsyncram_ddg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|onchip_memory2_0:the_onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_f3c1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_oci_im:the_cpu_0_nios2_oci_im|cpu_0_traceram_lpm_dram_bdp_component_module:cpu_0_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|cpu_0:the_cpu_0|cpu_0_nios2_oci:the_cpu_0_nios2_oci|cpu_0_nios2_ocimem:the_cpu_0_nios2_ocimem|cpu_0_ociram_lpm_dram_bdp_component_module:cpu_0_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_c572.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|cpu_0:the_cpu_0|cpu_0_register_bank_a_module:cpu_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_vaf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|plot_mux:x_plot|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_tmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|xy_select:xy_selection|xy_mux:x1_sel|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_tmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|xy_select:xy_selection|y_mux:y0_sel|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_w:the_jtag_uart_0_scfifo_w|scfifo:wfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|plot_mux:y_plot|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_tmc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|LDA_datapath:LDA_element|xy_select:xy_selection|y_mux:y1_sel|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_smc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|jtag_uart_0:the_jtag_uart_0|jtag_uart_0_scfifo_r:the_jtag_uart_0_scfifo_r|scfifo:rfifo" CBX_FILE_NAME="scfifo_1n21.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|cpu_0:the_cpu_0|cpu_0_register_bank_b_module:cpu_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_0bf1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|lab5_top_module|nios_system:drawline_system|drawlines_slave:the_drawlines_slave|drawlines:drawlines_slave|ASC:ACC_controller|read_mux:read_sel|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_k7f.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

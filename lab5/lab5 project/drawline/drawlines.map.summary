@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Mar 09 17:16:32 2014
+Quartus II 32-bit Version : 11.1 Build 173 11/01/2011 SJ Web Edition
+Revision Name : drawlines
+Top-level Entity Name : lab5_top_module
+Family : Cyclone II
+Total logic elements : 1,944
+    Total combinational functions : 1,786
+    Dedicated logic registers : 898
+Total registers : 898
+Total pins : 66
+Total virtual pins : 0
+Total memory bits : 274,432
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

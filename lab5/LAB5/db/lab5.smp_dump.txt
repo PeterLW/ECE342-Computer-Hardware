@@ -1,0 +1,21 @@
+
+State Machine - |lab5|LDA_CIRCUIT:LDA_cir|ps
+Name ps.s12 ps.s11 ps.s10 ps.s9 ps.s8 ps.s7 ps.s6 ps.s5 ps.s4 ps.s3 ps.s2 ps.s0 ps.s1 
+ps.s1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ps.s0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ps.s2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ps.s3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ps.s4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ps.s5 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ps.s6 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ps.s7 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ps.s8 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ps.s9 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ps.s10 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ps.s11 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ps.s12 1 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |lab5|ASC:drawline_controller|pstate
+Name pstate.poll_mode 
+pstate.stall_mode 0 
+pstate.poll_mode 1 

@@ -1,0 +1,16 @@
+LPM_PIPELINE=1
+LPM_SIZE=6
+LPM_TYPE=LPM_MUX
+LPM_WIDTH=32
+LPM_WIDTHS=3
+DEVICE_FAMILY="Cyclone II"
+clken
+clock
+data
+data
+data
+data
+data
+data
+sel
+result

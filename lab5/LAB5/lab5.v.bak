@@ -1,0 +1,68 @@
+module lab5(
+			//KEY,
+			X0,
+			Y0,
+			X1,
+			Y1,
+			GO,
+			done,
+			Color,
+			CLOCK_50,
+			VGA_R,
+			VGA_G,
+			VGA_B,
+			VGA_HS,
+			VGA_VS,
+			VGA_BLANK,
+			VGA_SYNC,
+			VGA_CLK,
+			
+			address,
+			waitrequest,
+			read,
+			write,
+			readdata,
+			writedata,
+			Reset
+	);
+
+	input address,waitrequest,read,write;
+	input [17:0] readdata,writedata;
+	//input [2:0] KEY;
+	input CLOCK_50;
+	input [8:0] X1,X0;
+	input [7:0] Y1,Y0;
+	input GO;
+	input [2:0] Color;
+	input Reset;
+	output done;
+	output [9:0] VGA_R;
+	output [9:0] VGA_G;
+	output [9:0] VGA_B;
+	output	VGA_HS,
+			VGA_VS,
+			VGA_BLANK,
+			VGA_SYNC,
+			VGA_CLK;		
+	
+	LDA_CIRCUIT LDA_cir1(0,
+			X0,
+			Y0,
+			X1,
+			Y1,
+			GO,
+			done,
+			Color,
+			CLOCK_50,
+			VGA_R,
+			VGA_G,
+			VGA_B,
+			VGA_HS,
+			VGA_VS,
+			VGA_BLANK,
+			VGA_SYNC,
+			VGA_CLK);
+			
+	endmodule
+			
+	

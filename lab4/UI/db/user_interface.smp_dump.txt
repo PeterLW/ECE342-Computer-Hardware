@@ -1,0 +1,10 @@
+
+State Machine - |user_interface|user_interface_FSM:comb_3|currentstate
+Name currentstate.waiting currentstate.load_realxy currentstate.load_steepxy currentstate.set_start currentstate.load_x1y1 currentstate.idle currentstate.load_x0y0 
+currentstate.load_x0y0 0 0 0 0 0 0 0 
+currentstate.idle 0 0 0 0 0 1 1 
+currentstate.load_x1y1 0 0 0 0 1 0 1 
+currentstate.set_start 0 0 0 1 0 0 1 
+currentstate.load_steepxy 0 0 1 0 0 0 1 
+currentstate.load_realxy 0 1 0 0 0 0 1 
+currentstate.waiting 1 0 0 0 0 0 1 

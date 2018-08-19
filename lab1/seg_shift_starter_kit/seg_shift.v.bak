@@ -1,0 +1,37 @@
+/*
+ * inputs:
+ * 	KEY0		reset
+ * 	KEY1		x2 the speed of shifting
+ * 	KEY2		/2 the speed of shifting
+ * 	SW[0]		enables shifting to the right
+ * 	SW[1]		enables shifting to the left; SW[0] overrides SW[1]
+ * 	SW[2]		shifts additional 1's into the HEX displays and LEDR
+ * 	SW[3]		shifts additional 0's into the HEX displays and LEDR
+ *
+ * outputs:
+ * 	LEDR		shifting lights
+ * 	HEX7-0	shifting pattern
+ * 	LEDG		shifting speed (from 0 to 9)
+*/
+module seg_shift (	CLOCK_50, KEY, SW, HEX3, HEX2, HEX1,
+					HEX0, LEDR, LEDG);
+	
+	/*****************************************************************************
+ 	*                  Module Parameters, Inputs and Outputs                     *
+ 	*****************************************************************************/
+				
+	input CLOCK_50;
+	input [2:0] KEY;
+	input [3:0] SW; 
+	output [6:0] HEX3, HEX2, HEX1, HEX0;
+	output [9:0] LEDR;
+	output [0:7] LEDG;
+
+ 	/*****************************************************************************
+ 	*                  Your implementation										*
+ 	*****************************************************************************/
+	
+ 	
+endmodule
+
+

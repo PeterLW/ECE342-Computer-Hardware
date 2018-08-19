@@ -1,0 +1,39 @@
+module UI(x,y,go,reset,done,clk, start);
+  input [7:0] x,y;
+  input go, reset, done, clk;
+  
+  output start;
+  output x0L, Ex0L, ExL, y0L, Ey0L, EyL; 
+  
+  localparam [3:0] s0=4'd0, s1=4'd1, s2=4'd2, s3=4'd3, s4=4'd4, s5=4'd5, s6=4'd6;
+  reg [3:0] ns,ps;
+  wire
+  
+  always@(*)
+    begin
+	   case(ps)
+		  s0: if(start) ns<=s1;
+		      else ns <=s0;
+		  s1: ns <= s2;
+		  s2: ns <= s3;
+		  s3: if(done) ns <= s4;
+		      else ns <= s3;
+		  s4: ns <= s4;
+		  s5: if(start) ns<=s5;
+		      else ns <= s4;
+		  s6: ns <= s2;
+		  default: ns <= 4'bxxxx;
+		endcase		
+	 end
+  always@(posedge clk, negedge reset)
+    begin
+	   if(~reset) ps <= s0;
+		else ps <= ns;
+	 end
+  assign 
+  
+  
+  
+endmodule
+
+    

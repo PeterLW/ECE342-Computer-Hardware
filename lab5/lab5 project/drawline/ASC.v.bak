@@ -1,0 +1,24 @@
+module asc(clk, reset, chipselect, address, read, write, writedata, readdata, waitrequest,
+           go, done_plot, x0, y0, x1, y1, colour);
+  //in asc 
+  input clk, reset, chipselect, read, write;
+  input [2:0] address;
+  input [31:0] writedata;
+  output [31:0] readdata;
+  output waitrequest;
+  
+  //to LDA
+  input done_plot;
+  output go;
+  output [8:0] x0, x1;
+  output [7:0] y0, y1;
+  output [2:0] colour;
+  
+  wire mode_register;
+  wire status_register;
+  wire go_register;
+  wire [17:0] line_starting_point, line_end_point;
+  wire [2:0] line_colour;
+  
+  
+	 

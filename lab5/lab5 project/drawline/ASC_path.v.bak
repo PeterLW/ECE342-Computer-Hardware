@@ -1,0 +1,31 @@
+module registerx(clk, reset, enable, a, b);
+   input enable, clk, reset;
+	input [8:0] a;
+	output [8:0] b;
+	
+	always@(posedge clk)
+	  begin
+	    if(~reset)
+		   b = 0;
+	    else if(enable)
+		   b = a;
+		 else
+		   b = b;
+	  end
+endmodule
+
+module registery(clk, reset, enable, a, b);
+   input enable, clk, reset;
+	input [7:0] a;
+	output [7:0] b;
+	
+	always@(posedge clk)
+	  begin
+	    if(~reset)
+		   b = 0;
+	    else if(enable)
+		   b = a;
+		 else
+		   b = b;
+	  end
+endmodule

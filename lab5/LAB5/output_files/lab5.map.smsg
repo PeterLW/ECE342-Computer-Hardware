@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at LDA_CIRCUIT.v(22): object "X0" differs only in case from object "x0" in the same scope
+Info (10281): Verilog HDL Declaration information at LDA_CIRCUIT.v(23): object "Y0" differs only in case from object "y0" in the same scope
+Info (10281): Verilog HDL Declaration information at LDA_CIRCUIT.v(22): object "X1" differs only in case from object "x1" in the same scope
+Info (10281): Verilog HDL Declaration information at LDA_CIRCUIT.v(23): object "Y1" differs only in case from object "y1" in the same scope

@@ -1,0 +1,75 @@
+module ASC(
+			address,
+			waitrequest,
+			read,
+			write,
+			readdata,
+			writedata,
+			CLOCK_50,
+			Reset
+			);
+		
+		input read,write,CLOCK_50,Reset;
+		reg input [31:0] address;
+		reg input [17:0] writedata;
+		reg output [17:0] readdata;
+		reg output waitrequest;
+		
+		wire  Mode_Register_Enable,Status_Register_Enable,Go_Register_Enable,Line_Starting_Point_Enable,Line_Ending_Point_Enable,Line_Color_Enable;
+		wire sl,sd,sp1,ss,sp2;
+	
+		reg [31:0] base_address = 0x00700000;
+		reg [31:0] offset;
+		initial offset = 3'b000;
+		
+		assign sl = (present_s == state_load);
+		assign sd = (present_s == state_detect);
+		assign sp1 = (present_s == state_process);
+		assign ss = (present_s == state_stall);
+		assign sp2 = (present_s == state_poll);
+		
+		defparam state_load = 3'b000,
+					state_detect = 3'b001,
+					state_process = 3'b010,
+					state_stall = 3'b011,
+					state_poll = 3'b100;
+		
+
+		reg [2:0] present_s, next_s;
+		initial present_s = 3'b000;
+		/* FSM */
+		always@(*)
+		begin
+		case(present_s)
+		state_load: next_s = state_detect;
+		state_detect: 
+		
+			
+		
+		
+		/* Data path */
+		always@(posedge CLOCK_50)
+			begin
+				present_s <= next_s;
+			end
+			
+		always@(posedge CLOCK_50)
+			begin
+				if(sl) //loading state_detect
+					begin
+						offset <= address - base_address;
+						//more....
+					end
+				else if(sd)
+					begin
+						case(offset[4:2])
+							3'b000: //Mode Register
+								begin
+									if()
+							
+							
+						
+			
+		
+			
+endmodule 

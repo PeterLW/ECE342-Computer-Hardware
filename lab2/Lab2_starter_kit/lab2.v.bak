@@ -1,0 +1,29 @@
+/* This is a top level module that connects the switches and the 7-segment hex displays
+ * to your multiplier.
+ */
+module lab2(SW, HEX0, HEX1, HEX2, HEX3);
+	input [15:0] SW;
+	output [6:0] HEX0;
+	output [6:0] HEX1;
+	output [6:0] HEX2;
+	output [6:0] HEX3;	
+
+	wire [7:0] A;
+	wire [7:0] B;
+	wire [15:0] result;
+	
+	
+	/* Connect switches to the multiplier. */
+	assign A = SW[7:0];
+	assign B = SW[15:8];
+	
+	/* Your multiplier circuit goes here. */
+	
+	
+	/* Multiplication result goes to HEX displays. */
+	hex_digits h0(result[3:0], HEX0);
+	hex_digits h1(result[7:4], HEX1);
+	hex_digits h2(result[11:8], HEX2);
+	hex_digits h3(result[15:12], HEX3);
+	
+endmodule
